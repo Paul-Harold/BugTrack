@@ -27,7 +27,7 @@ export default function ProjectLayout() {
   if (notFound)
     return (
       <div className="py-16 text-center text-slate-400">
-        Project not found. <Link to="/" className="text-indigo-400">Back to projects</Link>
+        Project not found. <Link to="/projects" className="text-indigo-400">Back to projects</Link>
       </div>
     );
   if (!project) return <Spinner label="Loading project..." />;
@@ -35,7 +35,7 @@ export default function ProjectLayout() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-6">
       <div className="mb-1 text-xs text-slate-500">
-        <Link to="/" className="hover:text-slate-300">Projects</Link> / {project.key}
+        <Link to="/projects" className="hover:text-slate-300">Projects</Link> / {project.key}
       </div>
       <div className="mb-4 flex flex-wrap items-center gap-3">
         <h1 className="text-2xl font-bold text-white">{project.name}</h1>

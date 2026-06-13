@@ -22,7 +22,7 @@ export default function Login() {
     try {
       const creds = override || form;
       await login(creds.email, creds.password);
-      navigate('/');
+      navigate('/projects');
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed');
     } finally {
